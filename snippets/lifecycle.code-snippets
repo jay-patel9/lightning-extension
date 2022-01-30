@@ -1,0 +1,62 @@
+{
+    "Constructor lifecycle": {
+        "prefix": "_construct",
+        "body": "_construct(){$1}",
+        "description": "Instance created, before spawning the template"
+    },
+    "Build Lifecycle": {
+        "prefix": "_build",
+        "body": "_build(){$1}",
+        "description": "Instance created, spawned the template"
+    },
+    "Setup Lifecycle": {
+        "prefix": "_setup",
+        "body": "_setup(){$1}",
+        "description": "Attached to the render tree, top-down (for the first time)"
+    },
+    "Init Lifecycle": {
+        "prefix": "_init",
+        "body": "_init(){$1}",
+        "description": "Attached (for the first time)"
+    },
+    "Attach Lifecycle": {
+        "prefix": "_attach",
+        "body": "_attach(){$1}",
+        "description": "Attached to the render tree, bottom-up"
+    },
+    "Detach Lifecycle": {
+        "prefix": "_detach",
+        "body": "_detach(){$1}",
+        "description": "Detached, bottom-up"
+    },
+    "First Enable Lifecycle": {
+        "prefix": "_firstEnable",
+        "body": "_firstEnable(){$1}",
+        "description": "Enabled (for the first time)"
+    },
+    "Enable Lifecycle": {
+        "prefix": "_enable",
+        "body": "_enable(){$1}",
+        "description": "Enabled (both attached and visible: true and alpha > 0)"
+    },
+    "Disable Lifecycle": {
+        "prefix": "_disable",
+        "body": "_disable(){$1}",
+        "description": "Disabled (either detached or invisible or both)"
+    },
+    "First Active Lifecycle": {
+        "prefix": "_firstActive",
+        "body": "_firstActive(){$1}",
+        "description": "Activated (for the first time)"
+    },
+    "Active Lifecycle": {
+        "prefix": "_active",
+        "body": "_active(){$1}",
+        "description": "Activated (both enabled and on screen)"
+    },
+    "Inactive Lifecycle": {
+        "prefix": "_inactive",
+        "body": "_inactive(){$1}",
+        "description": "Inactive (either detached, invisible or off screen)"
+    },
+}

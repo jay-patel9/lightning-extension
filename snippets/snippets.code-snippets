@@ -1,0 +1,189 @@
+{
+    "Lightning Class": {
+        "prefix": "!lightning",
+        "body": [
+            "import { Lightning } from \"@lightningjs/sdk\";",
+            "",
+            "export default class $1 extends Lightning.Component {",
+            "   static _template() {",
+            "       return {",
+            "           $2",
+            "       }",
+            "   }",
+            "",
+            "   _init() {",
+            "   }",
+            "",
+            "   _getFocused() {",
+            "  }",
+            "",
+            "  static _states() {",
+            "    return [];",
+            "  }",
+            "}",
+        ],
+        "description": "Create empty Lightning class"
+    },
+    "States": {
+        "prefix": "!state",
+        "body": [
+            "static _states() {",
+            "    return [",
+            "        class $1 extends this {",
+            "          \\$enter() {",
+            "            $2",
+            "          }",
+            "          \\$exit() {}",
+            "        },",
+            "    ]",
+            "}"
+        ],
+        "description": "create static state function"
+    },
+    "FireAncestor Function": {
+        "prefix": [
+            "fireAncestor",
+            "this.fireAncestor"
+        ],
+        "body": [
+            "this.fireAncestors('\\$$1', $2)"
+        ],
+        "description": "Fire Ancestor Function"
+    },
+    "Tag Function": {
+        "prefix": [
+            "tag",
+            "this.tag"
+        ],
+        "body": "this.tag(\"$1\")",
+        "description": "Tags are used to reference objects inside a template."
+    },
+    "Image Object": {
+        "prefix": "!imgcomp",
+        "body": [
+            "$1 : {",
+            "   w: $2,",
+            "   h: $3,",
+            "   src: $4,",
+            "},"
+        ]
+    },
+    "Text Object": {
+        "prefix": "!text",
+        "body": [
+            "$1 : {",
+            "   text: {",
+            "       text: '$2',",
+            "       fontFace: '$3',",
+            "       fontSize: '$4',",
+            "       fontStyle: '$4',",
+            "       textColor: '$5',",
+            "   },",
+            "},"
+        ],
+        "description": "Lightning text object"
+    },
+    "Animation": {
+        "prefix": "!animation",
+        "body": [
+            "this.tag('$1').animation({",
+            "duration: $2,",
+            "delay: $3,",
+            "repeat: $4,",
+            "stopMethod: $5,",
+            "actions: [",
+            "   {p: '$6', v: {$7}},",
+            "]",
+            "})"
+        ],
+    },
+    "Empty Component": {
+        "prefix": "!comp",
+        "description": "Empty component with type attribute",
+        "body": [
+            "$1 : {",
+            "   type: $2,",
+            "},",
+        ]
+    },
+    "Signal": {
+        "prefix": [
+            "this.signal",
+            "signal"
+        ],
+        "body": "this.signal('$1', $2 )"
+    },
+    "SetState Function": {
+        "prefix": [
+            "setState",
+            "this._setState"
+        ],
+        "body": "this._setState('$1')"
+    },
+    "Patching": {
+        "prefix": [
+            "this.patch",
+            "patch"
+        ],
+        "body": "this.patch({$1})",
+        "description": "Patching is a way to change the properties of existing elements in a template."
+    },
+    "GetFocused": {
+        "prefix": [
+            "_getFocused",
+            "getFocused"
+        ],
+        "body": [
+            "_getFocused(){",
+            "   return this.tag('$1')",
+            "}",
+        ],
+        "description": "The components delegate focus to their descendants"
+    },
+    "Focus": {
+        "prefix": [
+            "_focus",
+            "focus"
+        ],
+        "body": "_focus(){$1}",
+        "description": "Component receives focus"
+    },
+    "Unfocus": {
+        "prefix": [
+            "_unfocus",
+            "unfocus"
+        ],
+        "body": "_unfocus(){$1}",
+        "description": "Component loses focus"
+    },
+    "RouterApp": {
+        "prefix": "!routerapp",
+        "body": [
+            "import { Router } from \"@lightningjs/sdk\";",
+            "",
+            "export class $1 extends Router.App {",
+            "",
+            "   static _template() {",
+            "       return {",
+            "           $2",
+            "       }",
+            "   }",
+            "",
+            "   _init() {",
+            "   }",
+            "",
+            "   _setup() {",
+            "   }",
+            "",
+            "   static language() {",
+            "       return {}",
+            "  }",
+            "",
+            "   static getFonts() {",
+            "       return [] ",
+            "  }",
+            "",
+            "}",
+        ]
+    }
+}

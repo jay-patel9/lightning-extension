@@ -1,0 +1,30 @@
+{
+    "name": "lightningjs-framework-extension",
+    "displayName": "LightningJS Framework Extension",
+    "icon": "icon.png",
+    "description": "Code Snippet for RDK Lightning Framwork.",
+    "version": "1.0.0",
+    "publisher": "Jay Patel",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/jay-patel9/lightning-extension"
+    },
+    "engines": {
+        "vscode": "^1.63.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "javascript",
+                "path": "./snippets/snippets.code-snippets"
+            },
+            {
+                "language": "javascript",
+                "path": "./snippets/lifecycle.code-snippets"
+            }
+        ]
+    }
+}
