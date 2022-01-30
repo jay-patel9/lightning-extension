@@ -4,7 +4,7 @@
     "icon": "icon.png",
     "description": "Code Snippet for RDK Lightning Framwork.",
     "version": "1.0.0",
-    "publisher": "Jay Patel",
+    "publisher": "JayPatel",
     "repository": {
         "type": "git",
         "url": "https://github.com/jay-patel9/lightning-extension"
